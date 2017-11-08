@@ -49,6 +49,7 @@ class rabbitmq::install::rabbitmqadmin {
       password       => $default_pass,
       allow_insecure => true,
       cleanup        => false,
+      proxy_type     => 'none',
       require        => [
         Class['rabbitmq::service'],
         Rabbitmq_plugin['rabbitmq_management']
